@@ -1,5 +1,4 @@
 import Character from "./character";
-import Team from "./Team";
 
 export default class Magician extends Character {
   constructor(name) {

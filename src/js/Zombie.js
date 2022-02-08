@@ -1,5 +1,4 @@
 import Character from "./character";
-import Team from "./Team";
 
 export default class Zombie extends Character {
   constructor(name) {
