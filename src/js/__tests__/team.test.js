@@ -8,52 +8,52 @@ import Undead from "../Undead";
 import Zombie from "../Zombie";
 
 test("добавление персонажа в команду", () => {
-  const lusie = new Daemon("Lusie", "Daemon");
+  const alex = new Daemon("Alexey", "Daemon");
   const team = new Team();
-  team.add(lusie);
-  expect(team.members.has(lusie)).toBe(true);
+  team.add(alex);
+  expect(team.members.has(alex)).toBe(true);
 });
 
 test("невозможность повторного добавления персонажа", () => {
-  const anton = new Magician("Anton", "Magician");
+  const ivan = new Magician("Ivan", "Magician");
   const team = new Team();
-  team.add(anton);
+  team.add(ivan);
   expect(() => {
-    team.add(anton);
+    team.add(ivan);
   }).toThrow("Такой персонаж уже есть");
 });
 
 test("добавление нескольких персонажей в команду", () => {
-  const valera = new Bowman("Valera", "Bowman");
-  const greta = new Swordsman("Greta", "Swordsman");
+  const nikita = new Bowman("Nikita", "Bowman");
+  const masha = new Swordsman("Masha", "Swordsman");
 
   const team = new Team();
-  team.addAll(valera, greta);
+  team.addAll(nikita, masha);
   expect(team.members.size).toBe(2);
 });
 
 test("addAll - отсутвие ошибки дублирования персонажей", () => {
-  const valera = new Bowman("Valera", "Bowman");
-  const greta = new Swordsman("Greta", "Swordsman");
+  const alex = new Bowman("Valera", "Bowman");
+  const vika = new Swordsman("Vika", "Swordsman");
 
   const team = new Team();
-  team.addAll(valera, greta);
+  team.addAll(alex, vika);
   expect(() => {
-    team.addAll(valera, greta);
+    team.addAll(alex, vika);
   });
   expect(team.members.size).toBe(2);
 });
 
 test("преобразование в массив", () => {
-  const valera = new Undead("Valera", "Undead");
-  const greta = new Zombie("Greta", "Zombie");
+  const alex = new Undead("Alexey", "Undead");
+  const vika = new Zombie("Vika", "Zombie");
 
   const team = new Team();
-  team.addAll(valera, greta);
+  team.addAll(alex, vika);
   const received = team.toArray();
   const result = [
     {
-      name: "Valera",
+      name: "Alexey",
       type: "Undead",
       health: 100,
       level: 1,
@@ -61,7 +61,7 @@ test("преобразование в массив", () => {
       deffence: 25,
     },
     {
-      name: "Greta",
+      name: "Vika",
       type: "Zombie",
       health: 100,
       level: 1,

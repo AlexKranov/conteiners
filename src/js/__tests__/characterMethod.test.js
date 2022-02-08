@@ -5,10 +5,10 @@ import Swordsman from "../Swordsman";
 import Zombie from "../Zombie";
 
 test("Метод levelUp повышает уровень на 1 и изменяет показатели health, attack, deffence", () => {
-  const recieved = new Magician("Valera", "Magician");
+  const recieved = new Magician("Alexey", "Magician");
   recieved.levelUp();
   expect(recieved).toEqual({
-    name: "Valera",
+    name: "Alexey",
     type: "Magician",
     health: 100,
     level: 2,
@@ -18,16 +18,16 @@ test("Метод levelUp повышает уровень на 1 и изменя�
 });
 
 test("Метод levelUp выбрасывает ошибку, если health = 0", () => {
-  const recieved = new Zombie("Lusie", "Zombie");
+  const recieved = new Zombie("Alexey", "Zombie");
   recieved.health = 0;
   expect(() => recieved.levelUp()).toThrow("Нельзя повысить уровень умершего!");
 });
 
 test("Метод damage(points) меняет внутреннее состояние объекта(нанесение урона)", () => {
-  const recieved = new Bowman("Lusie", "Bowman");
+  const recieved = new Bowman("Alexey", "Bowman");
   recieved.damage(1);
   const result = {
-    name: "Lusie",
+    name: "Alexey",
     type: "Bowman",
     health: 99.1,
     level: 1,
@@ -38,10 +38,10 @@ test("Метод damage(points) меняет внутреннее состоян
 });
 
 test("Метод damage(points) не должен изменять значения, если health = 0", () => {
-  const recieved = new Swordsman("Stepan", "Swordsman");
+  const recieved = new Swordsman("Alexey", "Swordsman");
   recieved.health = 0;
   const result = {
-    name: "Stepan",
+    name: "Alexey",
     type: "Swordsman",
     health: 0,
     level: 1,
@@ -53,7 +53,7 @@ test("Метод damage(points) не должен изменять значен�
 });
 
 test("при health < 0 метод damage(points) должен уствновить health = 0", () => {
-  const recieved = new Daemon("Valera", "Daemon");
+  const recieved = new Daemon("Alexey", "Daemon");
   const expectedHealth = 0;
   recieved.damage(500);
   recieved.health = 0;

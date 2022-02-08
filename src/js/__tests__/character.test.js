@@ -8,15 +8,15 @@ import Zombie from "../Zombie";
 
 test("Заданный персонаж не существует", () => {
   expect(() => {
-    const result = new Character("xxx", "Fairy");
+    const result = new Character("xxx", "Howkey");
     return result;
   }).toThrow();
 });
 
 test("creation Bowman", () => {
-  const recieved = new Bowman("Lusie", "Bowman");
+  const recieved = new Bowman("Alexey", "Bowman");
   expect(recieved).toEqual({
-    name: "Lusie",
+    name: "Alexey",
     type: "Bowman",
     health: 100,
     level: 1,
@@ -26,9 +26,9 @@ test("creation Bowman", () => {
 });
 
 test("creation Daemon", () => {
-  const recieved = new Daemon("Lusie", "Daemon");
+  const recieved = new Daemon("Alexey", "Daemon");
   expect(recieved).toEqual({
-    name: "Lusie",
+    name: "Alexey",
     type: "Daemon",
     health: 100,
     level: 1,
@@ -37,9 +37,9 @@ test("creation Daemon", () => {
   });
 });
 test("creation Magician", () => {
-  const recieved = new Magician("Lusie", "Magician");
+  const recieved = new Magician("Alexey", "Magician");
   expect(recieved).toEqual({
-    name: "Lusie",
+    name: "Alexey",
     type: "Magician",
     health: 100,
     level: 1,
@@ -48,9 +48,9 @@ test("creation Magician", () => {
   });
 });
 test("creation Swordsman", () => {
-  const recieved = new Swordsman("Lusie", "Swordsman");
+  const recieved = new Swordsman("Alexey", "Swordsman");
   expect(recieved).toEqual({
-    name: "Lusie",
+    name: "Alexey",
     type: "Swordsman",
     health: 100,
     level: 1,
@@ -59,9 +59,9 @@ test("creation Swordsman", () => {
   });
 });
 test("creation Undead", () => {
-  const recieved = new Undead("Lusie", "Undead");
+  const recieved = new Undead("Alexey", "Undead");
   expect(recieved).toEqual({
-    name: "Lusie",
+    name: "Alexey",
     type: "Undead",
     health: 100,
     level: 1,
@@ -70,9 +70,9 @@ test("creation Undead", () => {
   });
 });
 test("creation Zombie", () => {
-  const recieved = new Zombie("Lusie", "Zombie");
+  const recieved = new Zombie("Alexey", "Zombie");
   expect(recieved).toEqual({
-    name: "Lusie",
+    name: "Alexey",
     type: "Zombie",
     health: 100,
     level: 1,
