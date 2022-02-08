@@ -1,4 +1,5 @@
-import Character from "./Сharacter";
+import Character from "./character";
+import Team from "./Team";
 
 export default class Daemon extends Character {
   constructor(name) {

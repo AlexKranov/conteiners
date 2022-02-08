@@ -1,4 +1,4 @@
-import Character from "../Character";
+import Character from "../character";
 import Team from "../Team";
 import Bowman from "../Bowman";
 import Daemon from "../Daemon";
