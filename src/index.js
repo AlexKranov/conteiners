@@ -1,6 +1,5 @@
 import "./css/style.css";
-import "./js/Team";
-import "./js/Character";
+import "./js/Сharacter";
 import "./js/Bowman";
 import "./js/Daemon";
 import "./js/Magician";
