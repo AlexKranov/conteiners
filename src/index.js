@@ -1,5 +1,5 @@
 import "./css/style.css";
-import "./js/Сharacter";
+import "./js/character";
 import "./js/Bowman";
 import "./js/Daemon";
 import "./js/Magician";
