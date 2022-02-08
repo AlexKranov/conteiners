@@ -1,4 +1,4 @@
-import Character from "../Character";
+import Character from "../character";
 
 test("Количество символов в имени менее 2", () => {
   expect(() => {
